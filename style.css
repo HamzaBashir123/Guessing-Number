@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.mainDiv{
+    height:80%;
+    width: 50%;
+    background-color: lightgrey;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 30px;
+    background-image: url(./background.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    
+}
+/* upperDiv */
+.upperDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.upperDiv button{
+    padding: 5px;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+    box-shadow: 3px 5px #888888;
+    border-radius: 5px;
+    
+
+}
+.upperDiv button:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    color: red;
+    
+
+}
+.upperInput{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    box-shadow: 3px 5px #888888;
+
+}
+.upperDiv {
+
+}
+.section1{
+    margin: 10px;
+    text-align: center;
+}
+.correctNumber{
+    padding: 10px;
+    font-size: 80px;
+}
+.yourNumber{
+    padding: 10px;
+    font-size: 80px;
+}
+.lastDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.inputUser{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    box-shadow: 3px 5px #888888;
+}
+.check{
+    padding: 5px;
+    margin: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+    box-shadow: 3px 5px #888888;
+    border-radius: 5px;
+
+}
+.check:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    color: red;
+}
