@@ -7,6 +7,39 @@ var yourNumber = document.querySelector('.yourNumber')
 var tryAgain = document.querySelector('.tryAgain')
 var inputUser = document.querySelector('.inputUser')
 var check = document.querySelector('.check')
+var resultWin = document.querySelector('.resultWin')
+var overlay = document.querySelector('.overlay')
+var modal = document.querySelector('.modal')
+var modalButton = document.querySelector('.modalButton')
+var close = document.querySelector('.close')
+const body = document.querySelector('body')
+
+
+
+
+body.addEventListener('keydown', (e) => {
+    console.log(e.key, "==>>yeh wala key dabai hai")
+    if (e.key === 'Escape') {
+        overlay.classList.add('hidden')
+        modal.classList.add('hidden')
+    }
+})
+
+modalButton.addEventListener('click', () => {
+    overlay.classList.remove('hidden')
+    modal.classList.remove('hidden')
+})
+
+overlay.addEventListener('click', () => {
+    overlay.classList.add('hidden')
+    modal.classList.add('hidden')
+})
+
+
+close.addEventListener('click', () => {
+    overlay.classList.add('hidden')
+    modal.classList.add('hidden')
+})
 
 
 rangeNumber.addEventListener('click',() => {
@@ -20,13 +53,17 @@ rangeNumber.addEventListener('input',() => {
     maxRangeNumberSet.innerHTML =rangeNumber.value
     
 })
+
+
 check.addEventListener('click',() =>{
+    resultWin.classList.add('hidden')
     if(points.innerHTML >0){
-        var generateNumber = Math.round(Math.random()*rangeNumber.value)
+        var generateNumber = Math.round(Math.random()*(rangeNumber.value-1))+1
         console.log(generateNumber)
-        if(generateNumber == inputUser.innerHTML){
-            correctNumber.innerHTML = "Matched";
-            yourNumber.innerHTML = "Matched";
+        if(generateNumber == inputUser.value){
+            resultWin.classList.remove('hidden')
+            correctNumber.innerHTML = generateNumber;
+            yourNumber.innerHTML = inputUser.value;
             points.textContent = +points.textContent + 1;
             if(highScore.textContent < points.textContent ){
                 highScore.textContent = points.textContent
