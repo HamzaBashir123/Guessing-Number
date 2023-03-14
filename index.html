@@ -1,63 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guessing Number</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="mainDiv">
-        <div class="upperDiv">
-    <button class="tryAgain">Try again!</button>
- 
+      <div class="upperDiv">
+        <button class="tryAgain">Try again!</button>
+
         <button class="modalButton">Rules</button>
-    
-    <input class="upperInput" type="number" placeholder="Input max guessing number ">
-</div>
-<div class="section1">
-<h1>Guessing number b/w 1 to <span class="changeNumber">?</span> </h1>
-<h3>Correct number is:</h3>
-<span class="correctNumber">?</span>
-<h3>Your number is:</h3>
-<span class="yourNumber">?</span><br>
-<div class="corretAnswer">
-<span class="hidden resultWin">Your answer is correct</span>
-</div>
-</div>
-<div class="lastDiv">
-    <div>
-    <input class="inputUser" type="number" placeholder="Enter Guess Number"><br>
-    <button class="check">Check</button>
-</div>
-<div>
-    <h2>Your Points: <span class="points">20</span></h2><br>
-    <h2>High Score: <span class="highScore">0</span></h2>
-</div>
-</div>
-</div>
 
-<div class="modal hidden">
-    <button class="close">X</button>
-    <p>1. The game will select a random number between a minimum and maximum value that you specify at the beginning of the game.</p>
-        <p>2. Your task is to guess the number the game has selected within the given number of attempts.
-        </p>
-        <p>3. You need to input your guess by entering a number into a text field and submitting your guess by pressing a "Check" button.
-        </p>
-        <p>4. After you submit your guess, the game will check if your guess is correct, the game will display a message "You Won".
-        </p>
-        <p>5. If you run out of attempts without guessing the correct number, you lose the game.</p>
-</div>
-<div class="overlay hidden"></div>
+        <input
+          class="upperInput"
+          type="number"
+          placeholder=" Range number "
+          style="width: 120px;"
+        />
+      </div>
+      <div class="section1">
+        <h1>Guessing number b/w 1 to <span class="changeNumber">?</span></h1>
+        <h3>Correct number is:</h3>
+        <span class="correctNumber">?</span>
+        <h3>Your number is:</h3>
+        <span class="yourNumber">?</span><br />
+        <div class="corretAnswer">
+          <span class="hidden resultWin">Your answer is correct</span>
+        </div>
+      </div>
+      <div class="lastDiv">
+        <div>
+            <p>Also check press Enter</p>
+          <input
+            class="inputUser "
+            type="number"
+            placeholder="Enter Guess Number"
+          /><br />
+          <button class="check">Check</button>
+        </div>
+        <div>
+          <h2>Your Points: <span class="points">20</span></h2>
+          <br />
+          <h2>High Score: <span class="highScore">0</span></h2>
+        </div>
+      </div>
+    </div>
 
+    <div class="modal hidden">
+      <button class="close">X</button>
+      <p>
+        1. The game will select a random number between a minimum and maximum
+        value you are insert that you specify at the beginning of the game.
+      </p>
+      <p>
+        2. Your task is to guess the number the game has selected within the
+        given number of attempts.
+      </p>
+      <p>
+        3. You need to input your guess by entering a number into a text field
+        and submitting your guess by pressing a "Check" button and also input field press "Enter" to check the answer.
+      </p>
+      <p>
+        4. After you submit your guess, the game will check if your guess is
+        correct, the game will display a message "Your answer is correct".
+      </p>
+      <p>
+        5. If you run out of attempts without guessing the correct number, you
+        lose the game.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
 
-
-
-
-
-
-
-    <script src="app.js" ></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -54,9 +54,9 @@ rangeNumber.addEventListener('input',() => {
     
 })
 
-
-check.addEventListener('click',() =>{
-    resultWin.classList.add('hidden')
+inputUser.addEventListener('keydown',(e)=>{
+    if(e.key==='Enter'){
+        resultWin.classList.add('hidden')
     if(points.innerHTML >0){
         var generateNumber = Math.round(Math.random()*(rangeNumber.value-1))+1
         console.log(generateNumber)
@@ -77,6 +77,43 @@ check.addEventListener('click',() =>{
             correctNumber.innerHTML = generateNumber
             yourNumber.innerHTML = inputUser.value
         }
+    
+    }
+    else{
+        alert("Gameover please try again")
+    }
+
+    }
+
+})
+
+check.addEventListener('click',() =>{
+    resultWin.classList.add('hidden')
+    if(points.innerHTML >0){
+        var generateNumber = Math.round(Math.random()*(rangeNumber.value-1))+1
+        // console.log(generateNumber)
+        if (Number(rangeNumber.value) >= Number(inputUser.value)){
+        if(generateNumber == inputUser.value){
+            resultWin.classList.remove('hidden')
+            correctNumber.innerHTML = generateNumber;
+            yourNumber.innerHTML = inputUser.value;
+            points.textContent = +points.textContent + 1;
+            if(highScore.textContent < points.textContent ){
+                highScore.textContent = points.textContent
+               
+                
+            }
+    
+        }
+        else{
+            points.textContent = +points.textContent - 1;
+            correctNumber.innerHTML = generateNumber
+            yourNumber.innerHTML = inputUser.value
+        }
+    }
+    else{
+        alert("input number is not greater than range number ")
+    }
     
     }
     else{
